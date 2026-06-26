@@ -51,7 +51,9 @@ existing unit tests.
 
 3. Keep a local skip list, in the consumer's repo, for cases the implementation
    does not yet satisfy. Adopting a surface does not require passing every case.
-   That list is a consumer-side concern and is not part of these fixtures.
+   That list is a consumer-side concern and is not part of these fixtures. Linking
+   each skipped case to a tracking issue is recommended, not required: it keeps the
+   list temporary and reviewable rather than a silent quarantine.
 
 Updating to newer fixtures is a manual change of the pinned commit, made by each
 consumer when it chooses to. There is no central gate.

@@ -63,6 +63,7 @@ for case in read_jsonl("<type>/cases.jsonl"):
 
 Some implementations do not satisfy every case yet. A consumer enrolling
 incrementally keeps a local skip list of the cases it does not yet satisfy, in its
-own harness. When the implementation conforms, the entry is removed. That list is a
-consumer-side convenience; it does not live here, and these fixtures stay
-implementation-neutral.
+own harness, ideally with a tracking issue linked to each entry so the list stays
+temporary and reviewable rather than a silent quarantine. When the implementation
+conforms, the entry is removed. That list is a consumer-side convenience; it does
+not live here, and these fixtures stay implementation-neutral.
