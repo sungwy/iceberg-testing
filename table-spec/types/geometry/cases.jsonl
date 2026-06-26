@@ -1,0 +1,2 @@
+{"id":"geometry-default","input":"geometry","accept":true,"parsed":{"crs":null},"canonical":"geometry","clause":"appendix-c/geometry","note":"no parameters; CRS defaults to OGC:CRS84 and the canonical form omits it"}
+{"id":"geometry-unquoted-crs","input":"geometry(srid:4326)","accept":true,"parsed":{"crs":"srid:4326"},"canonical":"geometry(srid:4326)","clause":"appendix-c/geometry","note":"the CRS is given unquoted, matching the spec example. A reader that expects a quoted CRS diverges here"}
