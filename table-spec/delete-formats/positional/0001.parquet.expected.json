@@ -1,0 +1,14 @@
+{
+  "clause": "spec/row-level-deletes",
+  "delete-file": "0001.parquet",
+  "note": "positional delete file. file_path and pos are at the reserved field-ids 2147483546 and 2147483545; a reader maps the columns by field-id. Rows are sorted by (file_path, pos).",
+  "schema": [
+    {"field-id": 2147483546, "name": "file_path", "type": "string"},
+    {"field-id": 2147483545, "name": "pos", "type": "long"}
+  ],
+  "decoded-rows": [
+    {"2147483546": "data-0001.parquet", "2147483545": "0"},
+    {"2147483546": "data-0001.parquet", "2147483545": "5"},
+    {"2147483546": "data-0002.parquet", "2147483545": "2"}
+  ]
+}
