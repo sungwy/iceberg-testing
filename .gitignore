@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Local Python artifacts from regenerating fixtures
+__pycache__/
+*.py[cod]
+.venv/
+venv/

@@ -1,0 +1,26 @@
+# Representative .asf.yaml for the eventual apache/iceberg-testing repository.
+# This file only takes effect on ASF infrastructure (gitbox.apache.org). It is
+# included here so the example mirrors how the real repository would be governed.
+# Reference: https://github.com/apache/infrastructure-asfyaml/blob/main/README.md
+notifications:
+  commits:      commits@iceberg.apache.org
+  issues:       issues@iceberg.apache.org
+  pullrequests: issues@iceberg.apache.org
+
+github:
+  description: "Language-neutral conformance fixtures for Apache Iceberg implementations"
+  homepage: https://iceberg.apache.org/
+  labels:
+    - iceberg
+    - testing
+    - fixtures
+  features:
+    issues: true
+  enabled_merge_buttons:
+    squash: true
+    merge:  false
+    rebase: false
+  protected_branches:
+    main:
+      required_pull_request_reviews:
+        required_approving_review_count: 1
