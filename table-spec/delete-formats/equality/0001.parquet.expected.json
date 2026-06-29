@@ -1,0 +1,13 @@
+{
+  "clause": "spec/row-level-deletes",
+  "delete-file": "0001.parquet",
+  "note": "equality delete file. Each column carries its table field-id; ids are non-contiguous (1, 4) and not in column order, so a reader must map equality values by field-id, not by column position.",
+  "schema": [
+    {"field-id": 1, "name": "id", "type": "long"},
+    {"field-id": 4, "name": "category", "type": "string"}
+  ],
+  "decoded-rows": [
+    {"1": "3", "4": "b"},
+    {"1": "7", "4": "d"}
+  ]
+}

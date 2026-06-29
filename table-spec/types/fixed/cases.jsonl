@@ -1,0 +1,3 @@
+{"id":"fixed-no-space","input":"fixed[8]","accept":true,"parsed":{"length":8},"canonical":"fixed[8]","clause":"appendix-c/fixed","note":"canonical form; fixed length in square brackets"}
+{"id":"fixed-space-around","input":"fixed[ 8 ]","accept":true,"parsed":{"length":8},"canonical":"fixed[8]","clause":"appendix-c/fixed","note":"the spec allows whitespace inside the brackets; the canonical form removes it. A distinct axis from decimal whitespace: a reader may be lenient on one and strict on the other"}
+{"id":"fixed-wrong-bracket","input":"fixed(8)","accept":false,"clause":"appendix-c/fixed","note":"fixed uses square brackets, not parentheses; parentheses are malformed"}
