@@ -1,0 +1,19 @@
+{
+  "data-file": "metadata.json",
+  "format-version": 3,
+  "accept": true,
+  "clause": "table-spec/table-metadata-fields",
+  "note": "minimal valid v3 table metadata; the same table as metadata/v2 plus next-row-id (row lineage) and field defaults",
+  "invariants": {
+    "format-version": 3,
+    "table-uuid": "9c12d441-03fe-4693-9a96-a0705ddf69c1",
+    "last-sequence-number": 34,
+    "current-schema-id": 0,
+    "default-spec-id": 0,
+    "default-sort-order-id": 3,
+    "last-partition-id": 1000,
+    "next-row-id": 0,
+    "schemas[0].fields[0].initial-default": 1,
+    "schemas[0].fields[0].write-default": 1
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "accept": true,
+  "clause": "parquet-variant-shredding/value-shredding",
+  "data-file": "case-089.parquet",
+  "decoded-rows": [
+    {
+      "2": {
+        "type": "null"
+      }
+    }
+  ],
+  "iceberg-schema": [
+    {
+      "field-id": 1,
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "field-id": 2,
+      "name": "var",
+      "type": "variant"
+    }
+  ],
+  "note": "a present value that is a Variant null ({type: null}); distinct from a physical/SQL-null row (bare JSON null)"
+}

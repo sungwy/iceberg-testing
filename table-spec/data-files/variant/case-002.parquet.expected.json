@@ -1,0 +1,26 @@
+{
+  "accept": true,
+  "clause": "parquet-variant-shredding/arrays",
+  "data-file": "case-002.parquet",
+  "decoded-rows": [
+    {
+      "2": {
+        "type": "array",
+        "elements": []
+      }
+    }
+  ],
+  "iceberg-schema": [
+    {
+      "field-id": 1,
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "field-id": 2,
+      "name": "var",
+      "type": "variant"
+    }
+  ],
+  "note": "an empty shredded array stays an empty array; pins that it is not collapsed to null"
+}

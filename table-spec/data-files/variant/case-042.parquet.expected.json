@@ -1,0 +1,19 @@
+{
+  "accept": false,
+  "clause": "parquet-variant-shredding/value-shredding",
+  "data-file": "case-042.parquet",
+  "iceberg-schema": [
+    {
+      "field-id": 1,
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "field-id": 2,
+      "name": "var",
+      "type": "variant"
+    }
+  ],
+  "note": "writers must not produce both value and typed_value non-null unless the value is an object",
+  "reason": "both value and typed_value are non-null where the value is not an object; the spec forbids this except for objects"
+}

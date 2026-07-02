@@ -1,0 +1,19 @@
+{
+  "accept": false,
+  "clause": "parquet-variant-shredding/arrays",
+  "data-file": "case-040.parquet",
+  "iceberg-schema": [
+    {
+      "field-id": 1,
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "field-id": 2,
+      "name": "var",
+      "type": "variant"
+    }
+  ],
+  "note": "value and typed_value are mutually exclusive at a shredded array element",
+  "reason": "an array element sets both value and typed_value; the spec requires exactly one of the two to be non-null"
+}

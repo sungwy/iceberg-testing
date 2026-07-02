@@ -1,0 +1,27 @@
+{
+  "data-file": "equality-deletes.avro",
+  "format-version": 2,
+  "accept": true,
+  "clause": "table-spec/manifest-entry-fields",
+  "note": "a v2 equality-delete manifest entry, read by field-id. equality_ids (field 135) elements are field 136 = int. iceberg-go#880 wrote them as long and Java threw ClassCastException reading them; pinning the int element type is what catches that, and a flat decode of the values alone would not.",
+  "entries": [
+    {
+      "0": 1,
+      "1": "8744736658442914487",
+      "3": "0",
+      "2": {
+        "134": 2,
+        "100": "data/eq-deletes-0001.parquet",
+        "101": "PARQUET",
+        "102": {},
+        "103": "2",
+        "104": "1234",
+        "135": {
+          "element-field-id": 136,
+          "element-type": "int",
+          "value": [1, 2]
+        }
+      }
+    }
+  ]
+}

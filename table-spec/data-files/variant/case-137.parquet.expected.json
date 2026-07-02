@@ -1,0 +1,19 @@
+{
+  "accept": false,
+  "clause": "parquet-variant-shredding/shredded-value-types",
+  "data-file": "case-137.parquet",
+  "iceberg-schema": [
+    {
+      "field-id": 1,
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "field-id": 2,
+      "name": "var",
+      "type": "variant"
+    }
+  ],
+  "note": "shredded values must use one of the spec's listed physical types",
+  "reason": "a fixed_len_byte_array is not one of the Parquet types the spec lists for a shredded value"
+}

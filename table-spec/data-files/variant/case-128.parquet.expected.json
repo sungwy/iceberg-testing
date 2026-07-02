@@ -1,0 +1,19 @@
+{
+  "accept": false,
+  "clause": "parquet-variant-shredding/objects",
+  "data-file": "case-128.parquet",
+  "iceberg-schema": [
+    {
+      "field-id": 1,
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "field-id": 2,
+      "name": "var",
+      "type": "variant"
+    }
+  ],
+  "note": "an empty partially shredded object whose value is not an object is invalid",
+  "reason": "a non-object value carries shredded object fields; the spec requires typed_value to be null for a non-object"
+}
