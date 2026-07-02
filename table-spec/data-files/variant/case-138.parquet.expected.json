@@ -1,0 +1,35 @@
+{
+  "accept": true,
+  "clause": "parquet-variant-shredding/objects",
+  "data-file": "case-138.parquet",
+  "decoded-rows": [
+    {
+      "2": {
+        "type": "object",
+        "fields": {
+          "a": {
+            "type": "int16",
+            "value": 1234
+          },
+          "b": {
+            "type": "string",
+            "value": "iceberg"
+          }
+        }
+      }
+    }
+  ],
+  "iceberg-schema": [
+    {
+      "field-id": 1,
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "field-id": 2,
+      "name": "var",
+      "type": "variant"
+    }
+  ],
+  "note": "a shredded object with no residual value column: fields are read entirely from typed_value. The int16 physical type is pinned"
+}

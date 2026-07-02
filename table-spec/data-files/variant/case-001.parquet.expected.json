@@ -1,0 +1,35 @@
+{
+  "accept": true,
+  "clause": "parquet-variant-shredding/arrays",
+  "data-file": "case-001.parquet",
+  "decoded-rows": [
+    {
+      "2": {
+        "type": "array",
+        "elements": [
+          {
+            "type": "string",
+            "value": "comedy"
+          },
+          {
+            "type": "string",
+            "value": "drama"
+          }
+        ]
+      }
+    }
+  ],
+  "iceberg-schema": [
+    {
+      "field-id": 1,
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "field-id": 2,
+      "name": "var",
+      "type": "variant"
+    }
+  ],
+  "note": "a top-level shredded array of strings reassembles to the array in order"
+}

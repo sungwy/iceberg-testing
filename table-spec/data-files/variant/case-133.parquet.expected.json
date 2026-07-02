@@ -1,0 +1,31 @@
+{
+  "accept": true,
+  "clause": "parquet-variant-shredding/objects",
+  "data-file": "case-133.parquet",
+  "decoded-rows": [
+    {
+      "2": {
+        "type": "object",
+        "fields": {
+          "a": {
+            "type": "boolean",
+            "value": false
+          }
+        }
+      }
+    }
+  ],
+  "iceberg-schema": [
+    {
+      "field-id": 1,
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "field-id": 2,
+      "name": "var",
+      "type": "variant"
+    }
+  ],
+  "note": "a field whose value and typed_value are both null is missing, so it is absent from the result, not present as null"
+}

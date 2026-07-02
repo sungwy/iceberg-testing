@@ -1,0 +1,76 @@
+{
+  "accept": true,
+  "clause": "parquet-variant-shredding/objects",
+  "data-file": "case-083.parquet",
+  "decoded-rows": [
+    null,
+    {
+      "2": {
+        "type": "object",
+        "fields": {
+          "c": {
+            "type": "object",
+            "fields": {
+              "b": {
+                "type": "string",
+                "value": "iceberg"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "2": {
+        "type": "object",
+        "fields": {
+          "c": {
+            "type": "int8",
+            "value": 8
+          },
+          "d": {
+            "type": "double",
+            "value": -0.0
+          }
+        }
+      }
+    },
+    {
+      "2": {
+        "type": "object",
+        "fields": {
+          "c": {
+            "type": "object",
+            "fields": {
+              "a": {
+                "type": "int32",
+                "value": 34
+              },
+              "b": {
+                "type": "string",
+                "value": ""
+              }
+            }
+          },
+          "d": {
+            "type": "double",
+            "value": 0.0
+          }
+        }
+      }
+    }
+  ],
+  "iceberg-schema": [
+    {
+      "field-id": 1,
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "field-id": 2,
+      "name": "var",
+      "type": "variant"
+    }
+  ],
+  "note": "four rows: a physical/SQL-null row (bare null), then nested objects. Pins int8 vs int32 widths and the -0.0 vs 0.0 double boundary"
+}

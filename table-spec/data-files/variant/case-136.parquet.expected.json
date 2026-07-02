@@ -1,0 +1,44 @@
+{
+  "accept": true,
+  "clause": "parquet-variant-shredding/arrays",
+  "data-file": "case-136.parquet",
+  "decoded-rows": [
+    {
+      "2": {
+        "type": "array",
+        "elements": [
+          {
+            "type": "array",
+            "elements": [
+              {
+                "type": "string",
+                "value": "comedy"
+              },
+              {
+                "type": "string",
+                "value": "drama"
+              }
+            ]
+          },
+          {
+            "type": "array",
+            "elements": []
+          }
+        ]
+      }
+    }
+  ],
+  "iceberg-schema": [
+    {
+      "field-id": 1,
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "field-id": 2,
+      "name": "var",
+      "type": "variant"
+    }
+  ],
+  "note": "a nested array whose second element is an empty array; pins nested arrays and that an empty inner array is not collapsed to null"
+}
